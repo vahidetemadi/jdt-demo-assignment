@@ -1,0 +1,21 @@
+package test;
+
+public class TestOne {
+	
+	String s;
+	private TestTwo testTwo = new TestTwo();
+	
+	
+	private void methodOne(String ttt) {
+		
+	}
+	
+	class T {
+		
+		private String getName() {
+			return "Name_1";
+		}
+		
+	}
+
+}

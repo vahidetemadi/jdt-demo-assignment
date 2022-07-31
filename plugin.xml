@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="jdt-demo-first.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="jdt-demo-first.commands.category"
+            name="Sample Command"
+            id="jdt-demo-first.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="jdtdemofirst.handlers.JDTDemoHandler"
+            commandId="jdt-demo-first.commands.sampleCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="jdt-demo-first.commands.sampleCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="jdt-demo-first.menus.sampleMenu"
+               label="Sample Menu"
+               mnemonic="M">
+            <command
+                  commandId="jdt-demo-first.commands.sampleCommand"
+                  id="jdt-demo-first.menus.sampleCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="jdt-demo-first.toolbars.sampleToolbar">
+            <command
+                  id="jdt-demo-first.toolbars.sampleCommand"
+                  commandId="jdt-demo-first.commands.sampleCommand"
+                  icon="icons/sample.png"
+                  tooltip="Press to anlalyze the proejct">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

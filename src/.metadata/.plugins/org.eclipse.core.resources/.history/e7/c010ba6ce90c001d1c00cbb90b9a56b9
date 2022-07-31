@@ -1,0 +1,16 @@
+package test;
+
+public class TestOne {
+	
+	String s;
+	
+	
+	private void methodOne(String ttt) {
+		
+	}
+	
+	class T {
+		
+	}
+
+}
